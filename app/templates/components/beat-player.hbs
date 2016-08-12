@@ -1,0 +1,39 @@
+<table>
+  <tr class="settings-row">
+    <td>
+      <div class="controls">
+        <div class="play-pause paused" {{action "startStopSong"}}>
+          {{#if isPlaying}}
+            <span class="glyphicon glyphicon-pause"></span>
+          {{else}}
+            <span class="glyphicon glyphicon-play"></span>
+          {{/if}}
+        </div>
+        <div class="clear-beats" {{action "clearBeats"}}>
+          Clear
+        </div>
+        <div class="bpm">
+          <div>{{bpm}} BPM</div>
+          <input type="range"
+          value={{bpm}}
+          min="30"
+          max="120"
+          step="10"
+          onchange={{action "changeSpeed" value="target.value"}} />
+        </div>
+      </div>
+    </td>
+    {{#each beatLabels as |beatLabel|}}
+      <td class="beat-label">
+        {{beatLabel}}
+      </td>
+    {{/each}}
+  </tr>
+  {{#each soundMaps as |soundMap index|}}
+    {{beat-player-row
+      rowIndex=index
+      soundMap=soundMap
+    }}
+  {{/each}}
+</table>
+{{yield}}

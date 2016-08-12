@@ -2,6 +2,9 @@ input, select {
   cursor: pointer;
 }
 
+body {
+  padding-bottom: 20px;
+}
 /**
  * -----------------------------------------------------------------------------
  * Page Title

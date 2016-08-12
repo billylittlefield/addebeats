@@ -1,0 +1,33 @@
+<td class="settings-cell">
+  <div {{action "clearTrack"}} class="clear-beats track-clear">
+    Clear
+  </div>
+  <div class="track-control">
+    <div>Track</div>
+    <select class="track-select"
+      onchange={{action "trackChanged"
+      value="target.value"}}>
+      {{#each sounds as |soundItem|}}
+        <option value={{soundItem.value}}>{{soundItem.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="volume-control">
+    <div>Volume</div>
+    <input type="range"
+      value={{soundMap.volume}}
+      min="0"
+      max="1"
+      step="0.1"
+      onchange={{action "volumeChanged" value="target.value"}}/>
+  </div>
+</td>
+{{#each selectedBeats as |selectedBeat beatIndex|}}
+  <td>
+    {{beat-toggle
+      selected=selectedBeat
+      beatIndex=beatIndex
+      beatToggled="beatToggled"
+    }}
+  </td>
+{{/each}}
