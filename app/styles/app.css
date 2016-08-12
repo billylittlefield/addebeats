@@ -91,7 +91,18 @@ table {
  */
 .beat-player-row > td {
   padding: 5px;
-  height: 10px;
+  height: 100%;
+}
+.settings-cell > .clear-beats.track-clear {
+  display: inline-block;
+  float: right;
+  height: 30px;
+  padding: 6px;
+  text-align: center;
+  margin-left: 5px;
+}
+.track-clear:active {
+  background: #EDBFC8;
 }
 .beat-label {
   text-align: center;
@@ -157,11 +168,12 @@ tr.settings-row > td {
  */
 .settings-cell {
   float: left;
-  width: 210px;
+  width: 255px;
   padding-top: 8px;
 }
 .settings-cell div div {
   display: inline-block;
+  margin-right: 10px;
 }
 .settings-cell div input,select {
   float: right;
@@ -176,7 +188,8 @@ div.bpm > input {
   height: 20px;
 }
 .volume-control {
-  margin-top: 10px;
+  position:relative;
+  top: 3px;
 }
 .volume-control > div {
   position: relative;
@@ -187,6 +200,9 @@ div.bpm > input {
 }
 .track-control > div {
   padding-top: 5px;
+}
+div.volume-control input {
+  width: 185px;
 }
 .bpm {
   position: relative;
@@ -228,4 +244,7 @@ div.bpm > input {
 .clear-beats:active {
   box-shadow: inset 1.5px 1.5px 1.5px rgba(25, 25, 25, .4),
               inset -1.5px -1.5px 1.5px rgba(230, 230, 230, .4);
+}
+.track-control,.volume-control {
+  float: right;
 }
