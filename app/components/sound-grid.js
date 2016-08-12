@@ -18,7 +18,7 @@ export default Ember.Component.extend({
     'fix-finance',
     'ship-it',
     'no-money',
-    'not-bitter',
+    'not-bitter-db',
     'ka-ching'
   ],
 

@@ -39,7 +39,7 @@ export default Ember.Component.extend({
     { label: 'Ship it!', value: 'ship-it' },
     { label: 'Cyril', value: 'cyril' },
     { label: 'No Money', value: 'no-money' },
-    { label: 'Not bitter', value: 'not-bitter' }
+    { label: 'Not bitter', value: 'not-bitter-db' }
   ],
 
   actions: {
