@@ -5,21 +5,21 @@ export default Ember.Component.extend({
 
   sounds: [
     'build',
-    'together5',
-    'fire4',
-    'pants2',
-    'livin_the_dream2',
+    'together',
+    'fire',
+    'pants',
+    'livin-the-dream',
     'addepar2',
-    'attribute_damnit2',
-    'gsd2',
-    'best_idea',
-    'deployment_manager',
-    'does_that_make_sense3',
-    'fix_finance2',
-    'ship_it3',
-    'no_money2',
-    'not_bitter',
-    'register'
+    'attribute-damnit',
+    'gsd',
+    'best-idea',
+    'deployment-manager',
+    'does-that-make-sense',
+    'fix-finance',
+    'ship-it',
+    'no-money',
+    'not-bitter',
+    'ka-ching'
   ],
 
   firstRow: Ember.computed('sounds', function() {
